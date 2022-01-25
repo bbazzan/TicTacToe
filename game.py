@@ -3,7 +3,7 @@ import time
 from player import HumanPlayer, RandomComputerPlayer, SmartComputerPlayer
 
 
-class TicTacToe():
+class TicTacToe:
     def __init__(self):
         self.board = self.make_board()
         self.current_winner = None
