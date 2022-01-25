@@ -55,8 +55,8 @@ class SmartComputerPlayer(Player):
 
         # first we want to check if the previous move is a winner
         if state.current_winner == other_player:
-            return {'position': None, 'score': 1 * (state.num_empty_squares() + 1) if other_player == max_player else -1 * (
-                        state.num_empty_squares() + 1)}
+            return {'position': None, 'score': 1 * (state.num_empty_squares() + 1) if other_player == max_player
+                    else -1 * (state.num_empty_squares() + 1)}
         elif not state.empty_squares():
             return {'position': None, 'score': 0}
 
@@ -71,9 +71,9 @@ class SmartComputerPlayer(Player):
             # undo move
             state.board[possible_move] = ' '
             state.current_winner = None
-            sim_score['position'] = possible_move  # this represents the move optimal next move
+            sim_score['position'] = possible_move  # this represents the optimal next move
 
-            if player == max_player:  # X is max player
+            if player == max_player:
                 if sim_score['score'] > best['score']:
                     best = sim_score
             else:

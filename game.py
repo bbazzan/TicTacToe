@@ -93,13 +93,13 @@ def play(game, x_player, o_player, print_game=True):
 
 
 if __name__ == '__main__':
-    x_wins = 0
-    o_wins = 0
-    ties = 0
     X_player = HumanPlayer('X')
     O_player = SmartComputerPlayer('O')
     t = TicTacToe()
     result = play(t, X_player, O_player, print_game=True)
+    # x_wins = 0
+    # o_wins = 0
+    # ties = 0
     # for _ in range(100):
     #     X_player = SmartComputerPlayer('X')
     #     O_player = SmartComputerPlayer('O')
